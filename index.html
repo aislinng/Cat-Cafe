@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"> </script>
+    <title>CatCafe</title>
+</head>
+
+<body>
+    <div class="fondo">
+
+        <button type="button" id="darkmode" onclick="darkmode()">Dark Mode</button>
+
+    </div>
+
+    <div id="encabezado">
+    <img src="media\logo.webp" width="100px">
+    <p> Meow Cat Cafe </p>
+    <img src="media\logo.webp" width="100px">
+    </div>
+
+    <div class= "seccion">
+    <div id="cuerpo">
+    <h1>Descripción</h1>
+    <p>Meow Cat Café es más que una cafetería, es un refugio para quienes buscan buena compañía felina y sabores reconfortantes. Rodeado de arte y detalles únicos, es el lugar ideal para disfrutar de un café especial, deliciosos postres y relajarte en un ambiente acogedor. Nuestro espacio está inspirado en la calma y el encanto de los gatos, pensado para desconectar y dejarse llevar por la tranquilidad.</p>
+
+    </div>
+
+
+    <div id="cuerpo1">
+        <h1>Menú</h1>
+
+        <button onclick="mostrarMenu('lunes')">Lunes</button>
+        <button onclick="mostrarMenu('martes')">Martes</button>
+        <button onclick="mostrarMenu('miercoles')">Miércoles</button>
+        <button onclick="mostrarMenu('jueves')">Jueves</button>
+        <button onclick="mostrarMenu('viernes')">Viernes</button>
+        <button onclick="mostrarMenu('sabado')">Sábado</button>
+        <button onclick="mostrarMenu('domingo')">Domingo</button>
+
+        <div id="lunes" class="menu" style="display:none;">
+            <p>Café Gatuno Especial <b>$55</b></p>
+            <p>Macarons Felinos de Frambuesa <b>$45</b></p>
+            <p>Galletas Purrfectos <b>$35</b></p>
+            <p>Pastel de Atún con Queso <b>$60</b></p>
+            <p>Latte con Leche de Almendra para Gatos <b>$50</b></p>
+        </div>
+
+        <div id="martes" class="menu" style="display:none;">
+            <p>Café Miauccino <b>$50</b></p>
+            <p>Cupcakes con Sabor a Pescado <b>$40</b></p>
+            <p>Galletas Catnip <b>$30</b></p>
+            <p>Pastelito de Pollo en Miniatura <b>$70</b></p>
+            <p>Frappuccino Miau <b>$60</b></p>
+        </div>
+
+        <div id="miercoles" class="menu" style="display:none;">
+            <p>Café con Gato Cacao <b>$55</b></p>
+            <p>Pastel de Pequeñas Ratitas <b>$65</b></p>
+            <p>Churros Miau <b>$45</b></p>
+            <p>Donas Ratoncitas <b>$50</b></p>
+            <p>Té de Hierba Gatera <b>$40</b></p>
+        </div>
+
+        <div id="jueves" class="menu" style="display:none;">
+            <p>Café con Leche de Gata <b>$50</b></p>
+            <p>Croissants con Sabor a Atún <b>$45</b></p>
+            <p>Macarrones Gatunos <b>$55</b></p>
+            <p>Pastel de Pollo Gato Gourmet <b>$75</b></p>
+            <p>Frappé de Pescado Fresco <b>$65</b></p>
+        </div>
+
+        <div id="viernes" class="menu" style="display:none;">
+            <p>Café Espresso con Sombra de Gato <b>$55</b></p>
+            <p>Cupcakes de Camarones <b>$50</b></p>
+            <p>Galletas para Gatos Mágicos <b>$40</b></p>
+            <p>Pastel de Gambas en Miniatura <b>$80</b></p>
+            <p>Café Frappé Miau Especial <b>$70</b></p>
+        </div>
+
+        <div id="sabado" class="menu" style="display:none;">
+            <p>Café Latte "Gato Padrino" <b>$60</b></p>
+            <p>Mini Pasteles de Pescado y Calabaza <b>$55</b></p>
+            <p>Galletas Felinas de Menta <b>$35</b></p>
+            <p>Pastel de Queso con Ratón <b>$75</b></p>
+            <p>Frappé de Gata Tropical <b>$65</b></p>
+        </div>
+
+        <div id="domingo" class="menu" style="display:none;">
+            <p>Café con Sabor a Ratón <b>$50</b></p>
+            <p>Galletas en Forma de Patita de Gato <b>$40</b></p>
+            <p>Pastel de Gato Feliz (Chocolate Blanco) <b>$70</b></p>
+            <p>Macarons de Sabor a Pescado <b>$45</b></p>
+            <p>Frappuccino Gato del Día <b>$60</b></p>
+        </div>
+    </div>
+
+
+    <div id="cuerpo2">
+        <h1>Gatos</h1>
+
+        <h2>Don Bigotes</h2>
+        <img src="media\gato1.webp" width="300px">
+        <button onclick="mostrarDescripcion('descripcion1')">Ver Descripción</button>
+        <p id="descripcion1" style="display:none;">Un gordito simpático que siempre trae algo dulce y da consejos sabios.</p>
+
+        <h2>Mimi la Artista</h2>
+        <img src="media\gato2.webp" width="300px">
+        <button onclick="mostrarDescripcion('descripcion2')">Ver Descripción</button>
+        <p id="descripcion2" style="display:none;">Gata bohemia, creativa y soñadora. Ama la música jazz y decora las paredes de la cafetería con sus propios cuadros.</p>
+
+        <h2>Capitán Ronroneo</h2>
+        <img src="media\gato3.webp" width="300px">
+        <button onclick="mostrarDescripcion('descripcion3')">Ver Descripción</button>
+        <p id="descripcion3" style="display:none;">Gato aventurero con parche y pañuelo, siempre contando historias de sus viajes imaginarios.</p>
+    </div>
+
+    <div id="final">
+    <h1>Horario</h1>
+    <p><b>Lunes a Viernes de 8am a 10pm <br> Sábado y Dominogo de 10am a 8pm</b></p>
+
+    <h1>Dirección</h1>
+    <p>Av Nuevo León 284-Local D, código 2, Hipódromo, Cuauhtémoc, 06100 Ciudad de México, CDMX</p>
+
+    <h1>Mapa</h1>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120509.5117130197!2d-99.22411323599553!3d19.285747439060458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff6f57920399%3A0x75d0cb56c6b64bd0!2sMeow%20Cat%20Caf%C3%A9!5e0!3m2!1ses-419!2smx!4v1739298163687!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    </div>
+
+</body>
+</html>

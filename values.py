@@ -26,9 +26,23 @@ try:
         cur.execute("""INSERT INTO Gatos(nombre,imagen, descripcion)
                     VALUES(?,?,?);""",
                     ("latte", "cafe.jpg","78"))
+        
+        
         conn.commit()
+        def convertir_a_blob(ruta_imagen):
+            with open(ruta_imagen, 'rb') as file:
+                return file.read()
+            # Insertar imagen en la base de dato
+        nombre = "latio"
+        imagen_blob = convertir_a_blob("cafe.jpg")  # Reemplaza con la ruta de tu imagen
+        descripcion = "78"
+        cur.execute("INSERT INTO Gatos (nombre, imagen, descripcion) VALUES (?, ?, ?)", 
+            (nombre, imagen_blob, descripcion))
+        conn.commit()
+        
+        
 
-    pass
 
+    pass 
 except sqlite3.OperationalError as e:
     print("Failed to open database:",e)

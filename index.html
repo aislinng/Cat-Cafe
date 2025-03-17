@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="prueba.js"> </script>
     <title>CatCafe</title>
 </head>
 
@@ -17,9 +18,9 @@
     </div>
 
     <div id="encabezado">
-    <img src="media\logo.webp" width="100px">
+    <img src="logo.png" width="100px">
     <p> Meow Cat Cafe </p>
-    <img src="media\logo.webp" width="100px">
+    <img src="logo.png" width="100px">
     </div>
 
     <div class= "seccion">
@@ -33,7 +34,14 @@
     <div id="cuerpo1">
         <h1>Menú</h1>
 
-        <button onclick="mostrarMenu('lunes')">Lunes</button>
+        <button class="btnMenu" data-nombre="1" >Lunes</button>
+        <button class="btnMenu" data-nombre="2" >Martes</button>
+        <ul id="menuListLunes"></ul>
+        <ul id="menuListMartes"></ul>
+
+
+
+
         <button onclick="mostrarMenu('martes')">Martes</button>
         <button onclick="mostrarMenu('miercoles')">Miércoles</button>
         <button onclick="mostrarMenu('jueves')">Jueves</button>
@@ -104,8 +112,18 @@
 
         <h2>Don Bigotes</h2>
         <img src="media\gato1.webp" width="300px">
+
         <button onclick="mostrarDescripcion('descripcion1')">Ver Descripción</button>
+
         <p id="descripcion1" style="display:none;">Un gordito simpático que siempre trae algo dulce y da consejos sabios.</p>
+
+        <button class="btnGatos" data-nombre="late">1</button>
+        <div id="gatolate"></div>
+        <img class="imagen-gato" data-nombre="late" src="" />
+
+        <button class="btnGatos" data-nombre="latte">Cargar 2</button>
+        <div id="gatolatte"></div>
+        <img class="imagen-gato" data-nombre="latio" src="" />
 
         <h2>Mimi la Artista</h2>
         <img src="media\gato2.webp" width="300px">
